@@ -9,10 +9,10 @@
         widget_class: 'oe_form_field_float oe_form_field_monetary',
         init: function() {
             this._super.apply(this, arguments);
-            if (!this.options.percentage_position) {
+            if (!this.options.position) {
                 this.set({"percentage_position": 'after'});
             } else {
-                this.set({"percentage_position": this.options.percentage_position});
+                this.set({"percentage_position": this.options.position});
             };
             this.get_symbol();
         },
