@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template>
+    <t t-name="FieldPercentage" t-extend="FieldChar">
+        <t t-jquery="t:first" t-operation="before">
+            <t t-if="widget.get('percentage_symbol') and widget.get('percentage_position') === 'before'">
+                <t t-esc="widget.get('percentage_symbol')"/>
+            </t>
+        </t>
+        <t t-jquery="t:last" t-operation="after">
+            <t t-if="widget.get('percentage_symbol') and widget.get('percentage_position') === 'after'">
+                <t t-esc="widget.get('percentage_symbol')"/>
+            </t>
+        </t>
+    </t>
+</template>
